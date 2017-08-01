@@ -1,7 +1,9 @@
+angular.module('app', ['ui.router', 'modelicco.templates', 'ngSanitize', 'angularMoment', 'ngDialog'])
+    .config(($stateProvider, $urlRouterProvider, $locationProvider, $injector, $httpProvider) => {});
+
 setTimeout(function () {
   $('.section').toggleClass('visible');
 }, 100);
-
 //============================================================Animation2
 
 $('[has-ripple="true"]').click(function () {

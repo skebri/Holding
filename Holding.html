@@ -2,120 +2,35 @@
 <html>
 <head>
 <title>Holding</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="./dist/styles/app.css">
 </head>
-<body>
+<body ng-app="app">
 
-  <nav class="menu-wrapper">
-  <button class="menu-btn" has-ripple="true">
-    <i></i>
-    <i></i>
-    <i></i>
-    <span class="ripple"></span>
-  </button>
-  <ul class="menu">
-    <li class="menuitem-wrapper">
-      <div class="icon-holder">
-        <a href="#" class="menu-item">
-            <i class="material-icons">home</i>
-        </a>
-      </div>
-      <svg class="circle-holder">
-        <circle r="88" cx="50%" cy="50%" fill="none">
-        </circle>
-      </svg>
-    </li>
-    <li class="menuitem-wrapper">
-      <div class="icon-holder">
-        <a href="#" class="menu-item">
-            <i class="material-icons">face</i>
-        </a>
-      </div>
-      <svg class="circle-holder">
-        <circle r="88" cx="50%" cy="50%" fill="none">
-        </circle>
-      </svg>
-    </li>
-    <li class="menuitem-wrapper">
-      <div class="icon-holder">
-        <a href="#" class="menu-item">
-            <i class="material-icons">android</i>
-        </a>
-      </div>
-      <svg class="circle-holder">
-        <circle r="88" cx="50%" cy="50%" fill="none">
-        </circle>
-      </svg>
-    </li>
-    <li class="menuitem-wrapper">
-      <div class="icon-holder">
-        <a href="#" class="menu-item">
-            <i class="material-icons">shopping_cart</i>
-        </a>
-      </div>
-      <svg class="circle-holder">
-        <circle r="88" cx="50%" cy="50%" fill="none">
-        </circle>
-      </svg>
-    </li>
-    <li class="menuitem-wrapper">
-      <div class="icon-holder">
-        <a href="#" class="menu-item">
-            <i class="material-icons">room</i>
-        </a>
-      </div>
-      <svg class="circle-holder">
-        <circle r="88" cx="50%" cy="50%" fill="none">
-        </circle>
-      </svg>
-    </li>
-  </ul>
-  </nav>
+<ui-view></ui-view>
 
-  <div class="roundy">
-  <div class="section section-1">
-    <div class="content-wrap">
-      Firma
-    </div>
-  </div>
-  <div class="section section-2">
-    <div class="content-wrap">
-      Firma
-    </div>
-  </div>
-  <div class="section section-3">
-    <div class="content-wrap">
-      Firma
-    </div>
-  </div>
-  <div class="section section-4">
-    <div class="content-wrap">
-      Firma
-    </div>
-  </div>
-  <div class="section section-5">
-    <div class="content-wrap slika5">
-      Firma
-    </div>
-  </div>
-  <div class="section section-6">
-    <div class="content-wrap slika6">
-      Firma
-    </div>
-  </div>
-  <div class="section section-7">
-    <div class="content-wrap">
-      Firma
-    </div>
-  </div>
-  <div class="section section-8">
-    <div class="content-wrap">
-      Firma
-    </div>
-  </div>
-  <div class="center">Holding</div>
-</div>
+<script>
+    window.settings = {
+        production: false
+    };
+    if (!window.settings.production) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        (document.getElementsByTagName( "head" )[ 0 ]).appendChild( script );
+        script.src = "http://localhost:35729/livereload.js?snipver=1";
+    }
+</script>
+<script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script rel="preload" as="script" src="./app/plugins/angular.js"></script>
+<script rel="preload" as="script" src="./app/plugins/angular-sanitize-1-3-0.min.js"></script>
+<script rel="preload" as="script" src="./app/plugins/angular-ui-router.min.js"></script>
+<script rel="preload" as="script" src="./app/plugins/moment-2.17.1.min.js"></script>
+<script rel="preload" as="script" src="./app/plugins/angular-moment-1.0.1.min.js"></script>
+<script rel="preload" as="script" src="./app/plugins/ng-dialog-1.1.0.min.js"></script>
+<script rel="preload" as="script" src="./dist/scripts/templates.js"></script>
+<script rel="preload" as="script" src="./dist/scripts/app.js"></script>
 
-<script source="main.js"></script>
 </body>
 </html>

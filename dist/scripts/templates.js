@@ -1,0 +1,11 @@
+;(function(){
+
+'use strict';
+
+angular.module('modelicco.templates', []).run(['$templateCache', function($templateCache) {
+
+  $templateCache.put('base/base.html', '<nav class="menu-wrapper"><button class="menu-btn" has-ripple="true"><i></i> <i></i> <i></i> <span class="ripple"></span></button><ul class="menu"><li class="menuitem-wrapper"><div class="icon-holder"><a href="#" class="menu-item"><i class="material-icons">home</i></a></div><svg class="circle-holder"><circle r="88" cx="50%" cy="50%" fill="none"></circle></svg></li><li class="menuitem-wrapper"><div class="icon-holder"><a href="#" class="menu-item"><i class="material-icons">face</i></a></div><svg class="circle-holder"><circle r="88" cx="50%" cy="50%" fill="none"></circle></svg></li><li class="menuitem-wrapper"><div class="icon-holder"><a href="#" class="menu-item"><i class="material-icons">android</i></a></div><svg class="circle-holder"><circle r="88" cx="50%" cy="50%" fill="none"></circle></svg></li><li class="menuitem-wrapper"><div class="icon-holder"><a href="#" class="menu-item"><i class="material-icons">shopping_cart</i></a></div><svg class="circle-holder"><circle r="88" cx="50%" cy="50%" fill="none"></circle></svg></li><li class="menuitem-wrapper"><div class="icon-holder"><a href="#" class="menu-item"><i class="material-icons">room</i></a></div><svg class="circle-holder"><circle r="88" cx="50%" cy="50%" fill="none"></circle></svg></li></ul></nav><div class="roundy"><div class="section section-1"><div class="content-wrap">Firma</div></div><div class="section section-2"><div class="content-wrap">Firma</div></div><div class="section section-3"><div class="content-wrap">Firma</div></div><div class="section section-4"><div class="content-wrap">Firma</div></div><div class="section section-5"><div class="content-wrap slika5">Firma</div></div><div class="section section-6"><div class="content-wrap slika6">Firma</div></div><div class="section section-7"><div class="content-wrap">Firma</div></div><div class="section section-8"><div class="content-wrap">Firma</div></div><div class="center">Holding</div></div>');
+
+}]);
+
+})();
