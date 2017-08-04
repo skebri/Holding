@@ -1,11 +1,11 @@
 angular.module('app')
-        .config(($stateProvider, $locationProvider, $urlRouterProvider) => {
+        .config(($stateProvider, $locationProvider, $urlRouterProvider, ngDialogProvider) => {
 
-            // ngDialogProvider.setDefaults({
-            //     className: 'ngdialog-theme-default',
-            //     showClose: false
-            // });
-        // $urlRouterProvider.when('/', '/home');
+            ngDialogProvider.setDefaults({
+                className: 'ngdialog-theme-default',
+                showClose: false
+            });
+        
 
           $stateProvider
             .state('home', {

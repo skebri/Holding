@@ -1,5 +1,5 @@
 angular.module('app')
-	.directive('roundyItem', ($timeout) => {
+	.directive('roundyItem', ($timeout, ngDialog) => {
 		return {
 			restrict: 'E',
 			replace: true,
@@ -10,6 +10,13 @@ angular.module('app')
 			},
 			link: (scope) => {
 				scope.roundyClass = `section-${scope.index}`;
+
+				scope.openModal = () => {
+					console.log("DSADAS");
+					ngDialog.open({
+						template: 'modals/modal.html'
+					})
+				};
 
 				$timeout(function () {
 					scope.visible = true;
