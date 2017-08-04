@@ -3,7 +3,7 @@ angular.module('app')
 		return {
 			restrict: 'E',
 			replace: true,
-			templateUrl: 'components/roundy/roundy-item.html',
+			templateUrl: 'pages/home/roundy-item.html',
 			scope: {
 				'index': '=',
 				'item': '='

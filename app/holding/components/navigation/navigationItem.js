@@ -10,8 +10,6 @@ angular.module('app')
 				'toggleMenu': '='
 			},
 			link: (scope) => {
-				console.log('navigationItem', scope.index, scope.item);
-
 				scope.onItemClick = ($event) => {
 					scope.showSpin = true;
 

@@ -5,8 +5,8 @@ angular.module('app')
 			replace: true,
 			templateUrl: 'components/navigation/navigation.html',
 			link: (scope) => {
-				scope.items = ['home', 'face', 'android', 'shopping', 'room'];
-				console.log("nav");
+				scope.items = ['home', 'page', 'android', 'shopping', 'room'];
+				
 				scope.toggleMenu = () => {
 					scope.menuOpen = !scope.menuOpen;
 				};

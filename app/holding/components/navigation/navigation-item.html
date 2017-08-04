@@ -1,6 +1,6 @@
 <li class="menuitem-wrapper" ng-click="onItemClick()" ng-class="{'spin': showSpin}">
   <div class="icon-holder">
-    <a href="#" class="menu-item">
+    <a href="#" class="menu-item" ui-sref="{{ 'home.' + item }}">
         {{ item }}
     </a>
   </div>

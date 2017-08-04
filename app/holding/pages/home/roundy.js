@@ -3,7 +3,7 @@ angular.module('app')
 		return {
 			restrict: 'E',
 			replace: true,
-			templateUrl: 'components/roundy/roundy.html',
+			templateUrl: 'pages/home/roundy.html',
 			link: (scope) => {
 				scope.items = ['firma', 'firma', 'firma', 'firma', 'firma', 'firma', 'firma', 'firma'];
 

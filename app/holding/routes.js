@@ -1,21 +1,31 @@
 angular.module('app')
-        .config(($stateProvider, ngDialogProvider, $locationProvider) => {
+        .config(($stateProvider, $locationProvider, $urlRouterProvider) => {
 
-            ngDialogProvider.setDefaults({
-                className: 'ngdialog-theme-default',
-                showClose: false
-            });
+            // ngDialogProvider.setDefaults({
+            //     className: 'ngdialog-theme-default',
+            //     showClose: false
+            // });
+        // $urlRouterProvider.when('/', '/home');
 
           $stateProvider
             .state('home', {
+                url: '',
+                templateUrl: 'pages/base/base.html'
+            })
+            .state('home.home', {
                 url: '/',
-                templateUrl: 'base/base.html',
-                controller: 'baseCtrl'
+                template: '<roundy></roundy>',
+            })
+            .state('home.page', {
+                url: '/page',
+                template: '<page></page>',
             });
 
             if (window.history && window.history.pushState) {
-                $locationProvider.hashPrefix(''); // by default '!'
-                $locationProvider.html5Mode(true);
+                $locationProvider.html5Mode({
+                    enabled: true,
+                    requireBase: false
+                }).hashPrefix('');
             }
         });
 
