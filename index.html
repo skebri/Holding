@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Holding</title>
-<link rel="stylesheet" type="text/css" href="./dist/styles/app.css">
+  <title>Holding</title>
+  <base href="http://localhost/Holding/">
+  <link rel="stylesheet" type="text/css" href="./dist/styles/app.css">
 </head>
 <body ng-app="app">
 
-<ui-view></ui-view>
+<div ui-view></div>
 
 <script>
     window.settings = {
@@ -19,16 +20,13 @@
         script.src = "http://localhost:35729/livereload.js?snipver=1";
     }
 </script>
-<script
-  src="http://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+
 <script rel="preload" as="script" src="./app/plugins/angular.js"></script>
 <script rel="preload" as="script" src="./app/plugins/angular-sanitize-1-3-0.min.js"></script>
 <script rel="preload" as="script" src="./app/plugins/angular-ui-router.min.js"></script>
-<script rel="preload" as="script" src="./app/plugins/moment-2.17.1.min.js"></script>
-<script rel="preload" as="script" src="./app/plugins/angular-moment-1.0.1.min.js"></script>
-<script rel="preload" as="script" src="./app/plugins/ng-dialog-1.1.0.min.js"></script>
+<!-- <script rel="preload" as="script" src="./app/plugins/ng-dialog-1.1.0.min.js"></script> -->
+<!-- <script rel="preload" as="script" src="./app/plugins/moment-2.17.1.min.js"></script> -->
+<!-- <script rel="preload" as="script" src="./app/plugins/angular-moment-1.0.1.min.js"></script> -->
 <script rel="preload" as="script" src="./dist/scripts/templates.js"></script>
 <script rel="preload" as="script" src="./dist/scripts/app.js"></script>
 

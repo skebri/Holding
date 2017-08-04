@@ -1,0 +1,161 @@
+@mixin bp($width) {
+  @media all and (max-width: $width) {
+    @content;
+  }
+}
+
+body {
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.roundy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  transition: 0.5s;
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f7f7f7;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 20px;
+  padding-top: 30px;
+  color: #666; 
+}
+
+.section {
+  height: 1px;
+  width: 200px;
+  background-color: #dcddde;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: right center;
+  transition: 1s;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-100%, -100%) rotateZ(270deg);
+}
+
+.section.visible {
+  visibility: visible;
+
+  &:after {
+    left: 50%;
+  }
+}
+
+.content-wrap {
+  display: block;
+  position: absolute;
+  text-align: center;
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  transition: 1s;
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  line-height: 70px; 
+  color: #2b85c1;
+}
+
+$sections: 8;
+$degs: 360/$sections;
+$mainDeg: 0;
+
+@for $i from 1 through $sections {
+  .section-#{$i} {
+    transition-delay: #{$i / 30}s;
+
+    .content-wrap {
+      transform: translate(-50%, -50%) rotateZ(-270deg);
+    }
+  }
+}
+
+@for $i from 0 through $sections {
+  $thisdeg: ($degs * $i) + $degs + $mainDeg;
+
+  .section-#{$i}.visible {
+    transform: translate(-100%, -100%) rotateZ(#{$thisdeg}deg);
+    opacity: 1;
+
+    .content-wrap {
+      transform: translate(-50%, -50%) rotateZ(#{-$thisdeg}deg);
+      color: white;
+    }
+  }
+}
+
+// @include bp(700px) {
+//   .roundy,
+//   .content-wrap,
+//   .center {
+//     width: 100%;
+//     height: auto;
+//     transform: none;
+//     position: static;
+//     transition: none;
+//   }
+
+//   .content-wrap {
+//     padding: 0;
+//   }
+
+//   .section,
+//   .section.visible {
+//     transition: none;
+//     width: 100%;
+//     height: auto;
+//     transform: none;
+//     position: static;
+//     background-color: initial;
+//     padding: 5px 20px;
+//     max-width: 300px;
+//     margin: 0 auto;
+
+//     + .section {
+//       margin-top: 5px;
+//     }
+
+//     .content-wrap {
+//       transform: none;
+//     }
+//   }
+// }
+
+.content-wrap {
+background: #F9C112 url(https://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png) no-repeat center top;
+background-size: 75px 75px;
+width: 75px;
+height: 75px;
+  &:hover {
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
+    cursor: pointer;
+  }
+}
+
+.slika2 {
+  background: url(https://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png) no-repeat center top;
+}

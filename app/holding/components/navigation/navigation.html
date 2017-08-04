@@ -1,0 +1,12 @@
+<nav class="menu-wrapper">
+  <button class="menu-btn" ng-click="toggleMenu()" ng-class="{'clicked': menuOpen}">
+      <i></i>
+      <i></i>
+      <i></i>
+      <span class="ripple"></span>
+  </button>
+
+  <ul class="menu" ng-class="{'open': menuOpen}">
+    <navigation-item ng-repeat="item in items track by $index" index="$index" item="item" toggle-menu="toggleMenu"></navigation-item>
+  </ul>
+</nav>

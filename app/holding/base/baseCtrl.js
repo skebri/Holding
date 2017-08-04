@@ -1,4 +1,4 @@
 angular.module('app')
-	.controller('baseCtrl', () => {
-		console.log("BASE CTRL");	
+	.controller('baseCtrl', ($scope) => {
+		
 	});

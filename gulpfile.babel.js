@@ -86,7 +86,7 @@ gulp.task('JsApp', () => jsGulpModel(SRC.appJS, DEST.appJS, 'app'));
 function jsGulpModel (src, dest, name) {
     return gulp.src(src)
         .pipe(production ? util.noop() :  sourcemaps.init())
-        .pipe(babel({presets: ['es2015'], "plugins": ["transform-object-rest-spread"]}))
+        .pipe(babel())
         .on('error', swallowError)
         .pipe(ngAnnotate({
             add: true,
@@ -109,7 +109,7 @@ gulp.task('buildTemplates', () => {
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(ngTemplate({
             filePath: 'templates.js',
-            moduleName: 'modelicco.templates',
+            moduleName: 'holding.templates',
             standalone: true
         }))
         .pipe(production ? uglify({mangle: false}) : util.noop())
