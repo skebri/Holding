@@ -1,5 +1,5 @@
-<div class="section" ng-class="[roundyClass, {'visible': visible}]" ng-click="openModal()">
+<div class="section" ng-class="[roundyClass, {'visible': visible}]" ng-click="openModal(item.slug)">
 	<div class="content-wrap">
-	  {{item}}
+	  {{ item.label }}
 	</div>
 </div>

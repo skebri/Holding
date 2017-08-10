@@ -4,17 +4,6 @@
   }
 }
 
-body {
-  background-color: #f7f7f7;
-  overflow: hidden;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .roundy {
   position: absolute;
   top: 50%;
@@ -44,7 +33,7 @@ body {
 
 .section {
   height: 1px;
-  width: 200px;
+  width: 225px;
   background-color: #dcddde;
   position: absolute;
   top: 50%;
@@ -74,11 +63,14 @@ body {
   text-align: center;
   width: 70px;
   height: 70px;
-  line-height: 70px; 
   color: #2b85c1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
 }
 
-$sections: 8;
+$sections: 9;
 $degs: 360/$sections;
 $mainDeg: 0;
 
@@ -143,8 +135,14 @@ $mainDeg: 0;
 //   }
 // }
 
+.roundy-wrapper {
+  position: relative;
+  height: calc(100vh - 80px);
+}
+
 .content-wrap {
-background: #F9C112 url(https://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png) no-repeat center top;
+// background: #F9C112 url(https://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png) no-repeat center top;
+background: #50666B;
 background-size: 75px 75px;
 width: 75px;
 height: 75px;

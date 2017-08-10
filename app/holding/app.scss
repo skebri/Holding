@@ -1,20 +1,99 @@
 html {
-  font-size: 16px;
+  font-family: Arial;
 }
 
 body {
-  background: #2c3e50;
+  background: lighten(#FEFAEC, 1);
   box-sizing: border-box;
   transition: all 0.25s ease-in;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+*, *:before, *:after  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@import "components/navigation/navigation";
+.page {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: 300px;
+  margin-right: 100px;
+}
 
+//COMPONENTS
+@import "components/navigation/navigation";
+@import "components/footer/footer";
+
+//MODALS
 @import "modals/ng-dialog-theme";
 
 // PAGES
 @import "pages/home/roundy";
 @import "pages/page/page";
+
+@media screen and (max-width: 1000px) {
+  .menu-wrapper {
+    top: 155px;
+    left: 50%;
+  }
+
+  .page {
+    margin-left: 100px;
+    margin-top: 300px;
+  }
+
+  .roundy-wrapper {
+    margin-top: 250px
+  }
+}
+
+@media screen and (max-width: 600px) {
+  // .menu-wrapper {
+  //   top: 155px;
+  //   left: 50%;
+  // }
+
+  .page {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .roundy-wrapper {
+    .section {
+      width: 150px;
+    }
+
+    .content-wrap {
+      width: 60px;
+      height: 60px;
+
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  // .menu-wrapper {
+  //   top: 155px;
+  //   left: 50%;
+  // }
+
+  .page {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .roundy-wrapper {
+    .section {
+      width: 100px;
+    }
+
+    .content-wrap {
+      width: 60px;
+      height: 60px;
+
+      font-size: 12px;
+    }
+  }
+}
+

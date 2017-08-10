@@ -11,10 +11,9 @@ angular.module('app')
 			link: (scope) => {
 				scope.roundyClass = `section-${scope.index}`;
 
-				scope.openModal = () => {
-					console.log("DSADAS");
+				scope.openModal = (slug) => {
 					ngDialog.open({
-						template: 'modals/modal.html'
+						template: `modals/${slug}.html`
 					})
 				};
 
